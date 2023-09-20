@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 
 public class Solution {
-    private static ArrayList<ArrayList<String>> sentences(String[][] grid) {
+    public static ArrayList<ArrayList<String>> sentences(String[][] grid) {
         ArrayList<ArrayList<String>> result = new ArrayList<>();
         ArrayList<String> currentSentence = new ArrayList<>();
         getAllSentences(grid, 0, currentSentence, result);
         return result;
-    } 
+    }
 
-    private static void getAllSentences(String[][] words, int row, ArrayList<String> curr, ArrayList<ArrayList<String>> result) {
+    private static void getAllSentences(String[][] words, int row, ArrayList<String> curr,
+            ArrayList<ArrayList<String>> result) {
         if (row == words.length) {
             result.add(new ArrayList<>(curr));
             return;
@@ -22,13 +23,16 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        String[][] words =  {{"you", "we"},
-                            {"have", "are"}};
+        String[][] words = { { "you", "we" },
+                { "have", "are" } };
 
         ArrayList<ArrayList<String>> result = sentences(words);
-        for(ArrayList<String> sentence: result) {
+        for (ArrayList<String> sentence : result) {
             System.out.println(sentence.toString());
         }
-    }
-}
+    }}
 
+    
+
+            
+    

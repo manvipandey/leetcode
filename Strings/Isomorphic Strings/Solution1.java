@@ -1,7 +1,6 @@
-//package Strings.IsomorphicStrings;
 import java.util.*;
 
-public class Solution
+public class Solution1
 {
     //Function to check if two strings are isomorphic.
     public static boolean areIsomorphic(String str1, String str2)
